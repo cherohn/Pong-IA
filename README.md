@@ -71,13 +71,14 @@ Pong-IA/
 ```
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
-Desenvolvido por **cherohn**  e **Erick801**
+**cherohn**  
 📎 [github.com/cherohn](https://github.com/cherohn)
+
+**Erick801**  
 📎 [github.com/Erick801](https://github.com/Erick801)
 
----
 
 ## 🪪 Licença
 
