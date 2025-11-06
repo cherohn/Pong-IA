@@ -52,11 +52,11 @@ Ela utiliza pesos aleatórios no início e ajusta os valores por meio do **algor
 Pong-IA/
 ├── src/
 │ └── main/java/com/pongai/game/pongai/
-│                          ── Game.java
-│                         ├── NeuralNetwork.java
-│                         ├── Paddle.java
-│                         ├── Ball.java
-│                         └── ...
+│ ├── Game.java
+│ ├── NeuralNetwork.java
+│ ├── Paddle.java
+│ ├── Ball.java
+│ └── ...
 ├── pom.xml
 ├── mvnw / mvnw.cmd
 └── README.md
