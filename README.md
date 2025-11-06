@@ -51,14 +51,20 @@ Ela utiliza pesos aleatórios no início e ajusta os valores por meio do **algor
 ## 📂 Estrutura do Projeto
 Pong-IA/
 ├── src/
-│ └── main/java/com/pongai/game/pongai/
+│ └── main/
+│ └── java/
+│ └── com/
+│ └── pongai/
+│ └── game/
+│ └── pongai/
 │ ├── Game.java
 │ ├── NeuralNetwork.java
 │ ├── Paddle.java
 │ ├── Ball.java
 │ └── ...
 ├── pom.xml
-├── mvnw / mvnw.cmd
+├── mvnw
+├── mvnw.cmd
 └── README.md
 
 ---
