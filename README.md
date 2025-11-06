@@ -73,8 +73,9 @@ Pong-IA/
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **cherohn**  
+Desenvolvido por **cherohn**  e **Erick801**
 📎 [github.com/cherohn](https://github.com/cherohn)
+📎 [github.com/Erick801](https://github.com/Erick801)
 
 ---
 
