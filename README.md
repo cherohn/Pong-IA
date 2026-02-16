@@ -1,50 +1,71 @@
-# 🏓 Pong-IA
+# 🏓 Pong AI – Neural Network From Scratch in Java
 
-Este projeto é uma recriação do clássico jogo **Pong**, com um diferencial: uma **inteligência artificial** controla um dos jogadores.  
-O objetivo foi desenvolver um sistema simples em Java capaz de simular aprendizado e tomada de decisão dentro do jogo.
+A recreation of the classic Pong game featuring a fully implemented neural network that controls one of the paddles.
 
----
-
-## 🎮 Sobre o Projeto
-
-O Pong-IA foi desenvolvido com foco em **estudo e experimentação de algoritmos de IA** aplicados a jogos.  
-A ideia é que a máquina consiga reagir ao movimento da bola, aprendendo a se posicionar corretamente para interceptá-la.
-
-O código foi escrito totalmente em **Java**, utilizando conceitos básicos de **redes neurais feedforward** com **backpropagation**.  
-A IA passa por um processo de treino e, conforme evolui, melhora suas respostas durante as partidas.
+This project was developed to explore artificial intelligence concepts by implementing a feedforward neural network trained with backpropagation — entirely from scratch, without external ML libraries.
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## 🎮 Project Overview
+
+Pong AI is a Java-based application where an artificial neural network learns to control a paddle in a 2D Pong environment.
+
+The objective was to build and train a neural network capable of making real-time decisions based on the ball's movement and game state.
+
+Unlike typical AI projects that rely on external frameworks, this implementation focuses on understanding and constructing the learning algorithm manually.
+
+---
+
+## 🧠 Neural Network Architecture
+
+The AI is based on a fully connected feedforward neural network with backpropagation for weight adjustment.
+
+Architecture:
+
+9 input neurons
+
+14 hidden neurons
+
+1 output neuron
+
+Key characteristics:
+
+Random weight initialization
+
+Forward propagation for prediction
+
+Backpropagation for error correction
+
+Continuous performance improvement during gameplay
+
+The output neuron determines the paddle’s vertical movement in response to the ball’s trajectory.
+---
+
+
+## ⚙️ Technologies Used
 
 - **Java**
 - **Maven** (para build e execução)
 - **JavaFX** (para interface gráfica)
-- **Lógica de redes neurais artificiais** (Feedforward + Backpropagation)
+- **Custom Neural Network Implementation** (Feedforward + Backpropagation)
 
 ---
 
 ## 🚀 Como Executar
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/cherohn/Pong-IA.git
+Running the Project
 
-   git clone https://github.com/cherohn/Pong-IA.git
-   cd Pong-IA
-   ./mvnw clean compile exec:java
-   mvnw.cmd clean compile exec:java
-    ```
-   
-## 🧠 Estrutura da IA
+Clone the repository:
 
-A inteligência artificial foi implementada a partir de uma **rede neural simples** com:
+git clone https://github.com/cherohn/Pong-IA.git
+cd Pong-IA
 
-- **9 neurônios de entrada**
-- **14 neurônios na camada oculta**
-- **1 neurônio de saída**
+Run with Maven:
+On Linux / macOS
+./mvnw clean compile exec:java
 
-Ela utiliza pesos aleatórios no início e ajusta os valores por meio do **algoritmo de backpropagation**, buscando melhorar seu desempenho ao longo do tempo.
+On Windows
+mvnw.cmd clean compile exec:java
 
 ---
 
@@ -71,7 +92,19 @@ Pong-IA/
 ```
 ---
 
-## 👨‍💻 Autores
+🧩 Learning Goals
+
+This project was built to:
+
+Understand neural network fundamentals
+
+Implement backpropagation manually
+
+Apply AI concepts to a real-time system
+
+Strengthen object-oriented design skills in Java
+
+## 👨‍💻 Authors
 
 **cherohn**  
 📎 [github.com/cherohn](https://github.com/cherohn)
@@ -80,7 +113,7 @@ Pong-IA/
 📎 [github.com/Erick801](https://github.com/Erick801)
 
 
-## 🪪 Licença
+## 🪪 License
 
-Este projeto é de código aberto e pode ser utilizado para fins educacionais ou de estudo.  
-Sinta-se livre para clonar, modificar e aprender com ele.
+This project is open-source and intended for educational purposes.
+Feel free to explore, modify, and experiment with the implementation.
