@@ -1,119 +1,85 @@
-# 🏓 Pong AI – Neural Network From Scratch in Java
+# Pong AI — Neural Network from Scratch in Java
 
-A recreation of the classic Pong game featuring a fully implemented neural network that controls one of the paddles.
+A classic Pong game where one paddle is controlled by a feedforward neural network trained via backpropagation, implemented entirely without external ML libraries.
 
-This project was developed to explore artificial intelligence concepts by implementing a feedforward neural network trained with backpropagation — entirely from scratch, without external ML libraries.
-
----
-
-## 🎮 Project Overview
-
-Pong AI is a Java-based application where an artificial neural network learns to control a paddle in a 2D Pong environment.
-
-The objective was to build and train a neural network capable of making real-time decisions based on the ball's movement and game state.
-
-Unlike typical AI projects that rely on external frameworks, this implementation focuses on understanding and constructing the learning algorithm manually.
+Built as a deep dive into how neural networks actually work under the hood — not as a framework exercise, but as a first-principles implementation of the learning algorithm itself.
 
 ---
 
-## 🧠 Neural Network Architecture
+## How It Works
 
-The AI is based on a fully connected feedforward neural network with backpropagation for weight adjustment.
+The AI paddle receives the current game state as input and decides whether to move up, down, or stay. The network learns through repeated gameplay, adjusting its weights via backpropagation every time it makes a mistake.
 
-Architecture:
+**Network architecture:**
 
-9 input neurons
+```
+Input layer:   9 neurons  (ball position, velocity, paddle positions, distances)
+Hidden layer: 14 neurons  (sigmoid activation)
+Output layer:  1 neuron   (paddle movement direction)
+```
 
-14 hidden neurons
-
-1 output neuron
-
-Key characteristics:
-
-Random weight initialization
-
-Forward propagation for prediction
-
-Backpropagation for error correction
-
-Continuous performance improvement during gameplay
-
-The output neuron determines the paddle’s vertical movement in response to the ball’s trajectory.
----
-
-
-## ⚙️ Technologies Used
-
-- **Java**
-- **Maven** (para build e execução)
-- **JavaFX** (para interface gráfica)
-- **Custom Neural Network Implementation** (Feedforward + Backpropagation)
+**Training loop:**
+1. Game state is fed into the network as a 9-value input vector
+2. Forward propagation produces a movement decision
+3. After each frame, the error is calculated against the expected output
+4. Backpropagation adjusts all weights to reduce that error
+5. The AI improves in real time as the game runs
 
 ---
 
-## 🚀 Como Executar
+## Tech Stack
 
-Running the Project
+| Layer | Technology |
+|---|---|
+| Language | Java 17 |
+| UI | JavaFX |
+| Build | Maven |
+| ML | Custom implementation (no external libraries) |
 
-Clone the repository:
+---
 
+## Running Locally
+
+**Requirements:** Java 17+, Maven 3.8+
+
+```bash
+# Clone
 git clone https://github.com/cherohn/Pong-IA.git
 cd Pong-IA
 
-Run with Maven:
-On Linux / macOS
-./mvnw clean compile exec:java
-
-On Windows
-mvnw.cmd clean compile exec:java
-
----
-
-## 📂 Estrutura do Projeto
-
-```text
-Pong-IA/
-├─ src/
-│  └─ main/
-│     └─ java/
-│        └─ com/
-│           └─ pongai/
-│              └─ game/
-│                 └─ pongai/
-│                    ├─ Game.java
-│                    ├─ NeuralNetwork.java
-│                    ├─ Paddle.java
-│                    ├─ Ball.java
-│                    └─ ...
-├─ pom.xml
-├─ mvnw
-├─ mvnw.cmd
-└─ README.md
+# Run
+./mvnw clean compile exec:java        # Linux / macOS
+mvnw.cmd clean compile exec:java      # Windows
 ```
+
 ---
 
-🧩 Learning Goals
+## Project Structure
 
-This project was built to:
+```
+Pong-IA/
+├── src/main/java/com/pongai/game/pongai/
+│   ├── NeuralNetwork.java   # Feedforward net + backpropagation
+│   ├── Game.java            # Game loop and training integration
+│   ├── Paddle.java          # Paddle logic (human and AI)
+│   ├── Ball.java            # Ball physics
+│   └── ...
+├── pom.xml
+└── README.md
+```
 
-Understand neural network fundamentals
+---
 
-Implement backpropagation manually
+## What I Learned
 
-Apply AI concepts to a real-time system
+- How backpropagation works mathematically, not just conceptually
+- The relationship between learning rate, convergence speed, and instability
+- Why weight initialization matters (random vs. zero)
+- How to connect a real-time game loop to a training cycle without freezing the UI
 
-Strengthen object-oriented design skills in Java
+---
 
-## 👨‍💻 Authors
+## Authors
 
-**cherohn**  
-📎 [github.com/cherohn](https://github.com/cherohn)
-
-**Erick801**  
-📎 [github.com/Erick801](https://github.com/Erick801)
-
-
-## 🪪 License
-
-This project is open-source and intended for educational purposes.
-Feel free to explore, modify, and experiment with the implementation.
+- **Matheus Garcez** — [github.com/cherohn](https://github.com/cherohn)
+- **Erick801** — [github.com/Erick801](https://github.com/Erick801)
